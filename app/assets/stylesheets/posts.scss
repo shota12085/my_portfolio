@@ -1,31 +1,193 @@
-.wrapper{
-  height: 100vh;
-  width: 100vw;
-  background-image: url("54DD36F7-78E4-40C2-A0F5-336D12D5ADAC_1_105_c.jpeg");
-  background-size: cover;
-  opacity: 0.8;
-  background-color: #eee;
-  .header{
+body{
+  color: #202020;
+  .wrapper{
+    height: 100vh;
     width: 100vw;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    .header-left{
-      width: 50%;
-      font-size: 24px;
-      padding: 10px 30px;
-    }
-    .header-right{
-      width: 50%;
-      &__flex{
-        display: flex;
-        justify-content: flex-end;
+    background-image: url("54DD36F7-78E4-40C2-A0F5-336D12D5ADAC_1_105_c.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    background-color: #eee;
+    .header{
+      backdrop-filter: blur(8px);
+      width: 100vw;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header-left{
+        width: 50%;
         font-size: 24px;
         padding: 10px 30px;
-        
+      }
+      .header-right{
+        width: 50%;
+        &__flex{
+          display: flex;
+          justify-content: flex-end;
+          font-size: 24px;
+          padding: 10px 30px;
+          
+        }
+        li{
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .secondary,.tertiary,.quaternary,.contact{
+    width: 100vw;
+    background-color: #eee;
+    .secondary-content{
+      text-align: center;
+      padding: 40px;
+      font-size: 40px;
+    }
+    .about{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      &__image{
+        width: 350px;
+        height: 400px;
+        margin-right: 100px;
+        opacity: 0;
+        transition: .7s;
+        margin-top: 60px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("17371A1B-AD52-4407-BA4A-BA578646A3B6_1_105_c.jpeg");
+      }
+      &__image.showUp{
+        opacity: 1;
+        margin-top: 0;
+      }
+      &__introduction{
+        opacity: 0;
+        transition: .7s;
+      }   
+      &__introduction.showIn{
+        opacity: 1;
+        transition: 2s;
+      }   
+    }
+    .scroll{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px 0 40px;
+    }
+    .scroll-image{
+      text-decoration: none;
+      font-size: 20px;
+      color: #202020;
+      margin: 0 20px;
+      width: 30px;
+      height: 30px;
+    }
+    .tertiary-content{
+      text-align: center;
+      padding: 40px;
+      font-size: 40px;
+    }
+    .skill{
+      width: 80%;
+      margin: 0 auto;
+      &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        &--item{
+          font-size: 20px;
+          border-bottom: 2px solid #ddd;
+          width: 25%;
+          margin: 5px;
+        }
+      }
+    }
+    .quaternary-content{
+      text-align: center;
+      padding: 40px;
+      font-size: 40px;
+    }
+    .collection{
+      width: 80%;
+      margin: 0 auto;
+      &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        &--item{
+          width: 45%;
+        }
+        &__image{
+          background-image: url("7ee550f355e31fd6bf42929966e2fba3.jpg");
+          background-size: cover;
+          background-position: center;
+          height: 300px;
+          &--app2{
+            background-image: url("6d09a37b0efa536d46022e88ef1e77bf.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+          }
+        }
+      }
+    }
+    .contact-content{
+      text-align: center;
+      padding: 20px 40px 10px;
+      font-size: 40px;
+    }
+    .contact-link{
+      width: 40%;
+      margin: 0 auto;
+    }
+    .contact-image{
+      background-image: url("Twitter_Logo_WhiteOnBlue.png");
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto 15px;
+      width: 40px;
+      height: 40px;
+    }
+    .form{
+      width: 80%;
+      margin: 0 auto;
+      &__name,&__email,&__subject,&__text{
+        text-align: center;
+      }
+      &__label{
+        width: 450px;
+        margin: 0 auto;
+        padding: 15px 5px;
+        font-size: 18px;
+      }
+      &__input{
+        width: 450px;
+        height: 50px;
+        padding: 10px;
+        border: none;
+      }
+      &__input--height{
+        width: 450px;
+        height: 150px;
+        padding: 10px;
+        border: none;
+      }
+      &__submit{
+        width: 450px;
+        margin: 0 auto;
+        padding: 15px 15px 10px;
+        text-align: right;
+        &--size{
+          height: 50px;
+          width: 30%;
+          border: none;
+        }
       }
     }
   }

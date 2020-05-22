@@ -1,19 +1,138 @@
 %main
-.wrapper
-  .header
-    .header-left
-      MY PORTFOLIO
-    .header-right
-      %ul.header-right__flex
-        %li about
-        %li skill
-        %li SNS
-    
+  .wrapper#wrapper
+    .header
+      .header-left
+        MY PORTFOLIO
+      .header-right
+        %ul.header-right__flex
+          %li#about about
+          %li#skill skill
+          %li#works works
+          %li blog
+          %li#contacts contact
+      
+    .scroll
+      %a{href: "#secondary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
 %secondary
-  .about
+  .secondary#secondary
+    %h2.secondary-content about
+    %h3.secondary-content 自己紹介
+    .about
+      .about-js
+        .about__image
+        
+      .about__introduction
+        %p 1989年7月14日生まれ 30歳 大阪府出身 神戸市在住
+        %p 小学生から野球一筋。大学に入学し、体育会野球部に入部するも怪我のため手術を経験。
+        %p 2年間の地道なリハビリを乗り越え野球サークルにて復帰し、現在も趣味で草野球をしています。
+        %p <学歴>
+        %p 関西大学社会学部社会学科に入学し、社会学、心理学について学ぶ。
+        %p <職歴>
+    .scroll
+      %a{href: "#wrapper"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
+      %a{href: "#tertiary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
+
 %tertiary
-  .skill
+  .tertiary#tertiary
+    %h2.tertiary-content My Skill Set
+    .skill
+      %ul.skill__list
+        %li.skill__list--item HTML5
+        %li.skill__list--item SCSS
+        %li.skill__list--item Ruby
+        %li.skill__list--item Ruby on Rails
+        %li.skill__list--item JavaScript
+        %li.skill__list--item PHP
+        %li.skill__list--item GitHub
+        %li.skill__list--item AWS
+    .scroll
+      %a{href: "#secondary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
+      %a{href: "#quaternary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
+
 %quaternary
-  .sns
+  .quaternary#quaternary
+    %h2.quaternary-content Collection of Works
+    .collection
+      %ul.collection__list
+        %li.collection__list--item
+          %a{href: "http://3.114.200.150/", rel: "noopener noreferrer", target: "_blank"}
+            .collection__list__image
+            .collection__list__title 
+              Thrive
+          .collection__list__introduction
+            %p <チーム開発（アジャイル開発)>
+            %p アクセス認証 ID: okada  Pass: tech73b
+            %p <開発言語> 
+            %p Haml・SCSS・Ruby・Ruby on Rails・JavaScript・jQuery・GitHub・AWS・S3
+
+            %p#js-show 概要を見る
+          .collection__list__show
+            %p <開発担当箇所>
+            %p フロントエンド サーバーサイド
+            %p ・データベース設計
+            %p ・ユーザーマイページ
+            %p ・トップページのカテゴリーhover表示
+            %p ・商品一覧、カテゴリーピックアップ一覧表示
+            %p ・商品写真の複数投稿、編集、削除機能
+            %p ・商品購入機能
+
+        %li.collection__list--item
+          %a{href: "http://3.114.198.104/", rel: "noopener noreferrer", target: "_blank"}
+            .collection__list__image--app2
+            .collection__list__title 
+              Task Calendar
+          .collection__list__introduction
+            %p <個人開発>
+            %p カレンダー共有アプリ(イベントごとにメッセージ機能あり)
+            %p <開発言語>
+            %p Haml・SCSS・Ruby・Ruby on Rails・JavaScript・jQuery・GitHub・AWS・S3
+
+            %p#js-show 概要を見る
+          .collection__list__show
+            %p <内容>
+            %p 家族、仕事仲間、友人で予定の共有ができ、それぞれの予定ごとにチャット機能を持った複合的機能をもつアプリケーションです。
+            %p <企画背景>
+            %p 前職において、業務の中での予定共有や案件に紐づくメール検索に時間を費やすとの声が多くあったことから、グループでのカレンダーを用いた予定共有やその予定ごとにチャット機能を持たせることで、どのイベントや案件での内容かを明確化させるアプリになります。個人のマイページを持たせることで、アプリに登録しているユーザーへの友達申請や承認、友達になれば、グループカレンダーに参加ができるような仕組みにすることで、家族や友人においても大切な予定を共有できるのではないかという思いで作成しました。
+
+            %p <テストアカウント>
+            %p name : テストID
+            %p email：test@gmail.com
+            %p password：test10
+            %p Github： https://github.com/shota12085/task_calendar
+    .scroll
+      %a{href: "#tertiary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
+      %a{href: "#contact"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
+%contact
+  .contact#contact
+    %h2.contact-content contact
+    .contact-link
+      %a{href: "https://twitter.com/Ti1NEKP43Ai66Cp", rel: "noopener noreferrer", target: "_blank"}
+        .contact-image
+      
+      
+    .form
+      .form__label
+        %label name
+      .form__name
+        %input{class: "form__input", type: "string",maxlength: 20,placeholder: "名前を入力してください"}
+      .form__label
+        %label email
+      .form__email
+        %input{class: "form__input", type: "email",maxlength: 50,placeholder: "メールアドレスを入力してください"}
+      .form__label
+        %label subject
+      .form__subject
+        %input{class: "form__input", type: "text",maxlength: 50,placeholder: "件名を入力してください"}
+      .form__label
+        %label text
+      .form__text
+        %textarea{class: "form__input--height", type: "text",maxlength: 800,placeholder: "件名を入力してください"}
+      .form__submit
+        %input{class: "form__submit--size", type: "submit", value: "送信"}
+    .scroll
+      %a.scroll-image{href: "#wrapper"} TOP
+      %a{href: "#quaternary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
+
+    
 
   
