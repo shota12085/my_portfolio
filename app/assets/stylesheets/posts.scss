@@ -189,7 +189,7 @@ body{
         background-image: url("17371A1B-AD52-4407-BA4A-BA578646A3B6_1_105_c.jpeg");
         @include PC{
           width: 300px;
-          // opacity: 1;
+          opacity: 1;
           margin-right: 30px;
         }
       }
@@ -205,7 +205,7 @@ body{
         font-family: fantasy;
         @include PC{
           width: 300px;
-          // opacity: 1;
+          opacity: 1;
         }
         h3{
           font-size: 28px;
