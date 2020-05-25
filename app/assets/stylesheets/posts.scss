@@ -165,6 +165,11 @@ body{
         width: 35%;
         margin-right: 100px;
         @include background_size();
+        @include PC{
+          width: 300px;
+          opacity: 1;
+          margin-right: 30px;
+        }
       }
       .about__introduction{
         width: 65%;
@@ -187,11 +192,6 @@ body{
         transition: .7s;
         @include background_size();
         background-image: url("17371A1B-AD52-4407-BA4A-BA578646A3B6_1_105_c.jpeg");
-        @include PC{
-          width: 300px;
-          opacity: 1;
-          margin-right: 30px;
-        }
       }
       &__image.showUp{
         opacity: 1;
