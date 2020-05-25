@@ -2,117 +2,210 @@
   .wrapper#wrapper
     .header
       .header-left
-        MY PORTFOLIO
       .header-right
         %ul.header-right__flex
-          %li#about about
-          %li#skill skill
-          %li#works works
-          %li blog
+          %li#about.header-list about
+          %li#skill.header-list skill
+          %li#works.header-list works
+          -# %li.header-list blog
           %li#contacts contact
-    %span.test{"data-in-effect" => "rollIn", "data-out-shuffle" => "true"} SAMPLE TEXT
-
-
-      
+    .concept
+      %span.concept-main{"data-in-effect" => "rollIn", "data-out-shuffle" => "true"} Shota's
+      %br
+      %span.concept-main{"data-in-effect" => "rollIn", "data-out-shuffle" => "true"} PORT FOLIO
+    .concept-message
+      %p 人と人をつなぎ、笑顔を咲かせ
+      %p 日常にちょっと良いことを作りたい。
+      %p webでできることが無限にあるから
+      %p 日々、1歩ずつ実現していきたい。
+    %a{href: "#secondary",class: "top-image"}
+      .top-nav about
+    %a{href: "#tertiary",class: "second-image"}
+      .second-nav skill
+    %a{href: "#quaternary",class: "third-image"}
+      .third-nav works
     .scroll
-      %a{href: "#secondary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
+      %a{href: "#secondary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image__top"
 %secondary
   .secondary#secondary
     %h2.secondary-content about
-    %h3.secondary-content 自己紹介
+    -# %h3.secondary-content 自己紹介
     .about
       .about-js
         .about__image
-        
+        -# .about__image--bottom
+        .about__contact
+          %h3 Link
+          .about__contact--link
+            %i.devicon-twitter-plain.colored
+            %a{href: "https://twitter.com/Ti1NEKP43Ai66Cp", rel: "noopener noreferrer", target: "_blank"} TWitter
+          .about__contact--link
+            %i.devicon-github-plain.colored
+            %a{href: "https://github.com/shota12085", rel: "noopener noreferrer", target: "_blank"} GitHub
+
       .about__introduction
         %p 1989年7月14日生まれ 30歳 大阪府出身 神戸市在住
         %p 小学生から野球一筋。大学に入学し、体育会野球部に入部するも怪我のため手術を経験。
         %p 2年間の地道なリハビリを乗り越え野球サークルにて復帰し、現在も趣味で草野球をしています。
-        %p <学歴>
-        %p 関西大学社会学部社会学科に入学し、社会学、心理学について学ぶ。
-        %p <職歴>
+        .marker-line ・プログラミングとの出会い
+        %p 営業職ではできないモノづくりやサービスを作ってみたいと2020年2月から独学でプログラミングを学び始める
+        .marker-line ！！思い立ったらすぐ行動！！
+        %p 30歳最後のチャレンジをしたいと思い、思い切って退職。プログラミングを本格的に学ぶべく、TECH CAMPに短期転職コースで入学し、本気でプログラミングを学び始める
+        %p チーム開発、個人開発を経験し、さらにプログラミングへの気持ちが強くなる。日々積み上げ、学びやアウトプットを増やしています。Twitter毎日積み上げアウトプット。
+        %p 新しい技術、流行りの技術には積極的に取り入れ、夢の実現に向けて1歩ずつ前に進んで日々邁進中です！！
+        %p 現在、転職活動をしており、さらにスキルを身に付け会社や社会に貢献できるような人間になれるように頑張っていきます！
+        .marker-line ・学歴
+        %p 関西大学社会学部社会学科を卒業し、在学中は社会学や心理学について学ぶ。
+        .marker-line ・職歴
+        %p 2012年4月新卒で大手電機メーカーに就職し、自動車、鉄道、ロボット関係の部品営業を経験
+        %p 2019年7月に半導体試験装置メーカーへ営業職として転職し、コミュニケーションスキルにさらに磨きをかける
     .scroll
-      %a{href: "#wrapper"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
-      %a{href: "#tertiary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
+      %a{href: "#wrapper"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image--left"
+      %a{href: "#tertiary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image--right"
 
 %tertiary
   .tertiary#tertiary
-    %h2.tertiary-content My Skill Set
+    %h2.tertiary-content Skill
     .skill
-      %ul.skill__list
-        %li.skill__list--item HTML5
-        %li.skill__list--item SCSS
-        %li.skill__list--item Ruby
-        %li.skill__list--item Ruby on Rails
-        %li.skill__list--item JavaScript
-        %li.skill__list--item PHP
-        %li.skill__list--item GitHub
-        %li.skill__list--item AWS
+      %ul.skill__lists
+        %li.skill__list.list-left
+          .skill__list--icon
+            %i.devicon-html5-plain-wordmark.colored
+            .skill__list--item HTML5
+          .skill__list--star
+            ★★★★☆
+        
+        %li.skill__list.list-right
+          .skill__list--icon
+            %i.devicon-css3-plain-wordmark.colored
+            .skill__list--item CSS
+          .skill__list--star
+            ★★★★☆
+
+        %li.skill__list.list-left
+          .skill__list--icon
+            %i.devicon-ruby-plain-wordmark.colored
+            .skill__list--item Ruby
+          .skill__list--star
+            ★★★☆☆
+        
+        %li.skill__list.list-right
+          .skill__list--icon
+            %i.devicon-rails-plain-wordmark.colored
+            .skill__list--item Ruby on Rails
+          .skill__list--star
+            ★★★☆☆
+
+        %li.skill__list.list-left
+          .skill__list--icon
+            %i.devicon-javascript-plain.colored
+            .skill__list--item JavaScript
+          .skill__list--star
+            ★★★☆☆
+
+        %li.skill__list.list-right
+          .skill__list--icon
+            %i.devicon-jquery-plain-wordmark.colored
+            .skill__list--item jQuery
+          .skill__list--star
+            ★★★☆☆
+
+        %li.skill__list.list-left
+          .skill__list--icon
+            %i.devicon-php-plain.colored
+            .skill__list--item PHP
+          .skill__list--star
+            ★☆☆☆☆
+        
+        %li.skill__list.list-right
+          .skill__list--icon
+            %i.devicon-laravel-plain.colored
+            .skill__list--item Laravel
+          .skill__list--star
+            ★☆☆☆☆
+
+        %li.skill__list.list-left
+          .skill__list--icon
+            %i.devicon-github-plain.colored
+            .skill__list--item GitHub
+          .skill__list--star
+            ★★★☆☆
+
+        %li.skill__list.list-right
+          .skill__list--icon
+            %i.devicon-docker-plain-wordmark.colored
+            .skill__list--item  Docker
+          .skill__list--star
+            ★☆☆☆☆
+
+        %li.skill__list.list-left
+          .skill__list--icon
+            .skill__list--item  AWS
+          .skill__list--star
+            ★★☆☆☆
+
     .scroll
-      %a{href: "#secondary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
-      %a{href: "#quaternary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
+      %a{href: "#secondary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image--left"
+      %a{href: "#quaternary"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image--right"
 
 %quaternary
   .quaternary#quaternary
-    %h2.quaternary-content Collection of Works
+    %h2.quaternary-content Works
     .collection
       %ul.collection__list
         %li.collection__list--item
-          %a{href: "http://3.114.200.150/", rel: "noopener noreferrer", target: "_blank"}
+          %a.collection__list--left{href: "http://3.114.200.150/", rel: "noopener noreferrer", target: "_blank"}
             .collection__list__image
             .collection__list__title 
               Thrive
-          .collection__list__introduction
-            %p <チーム開発（アジャイル開発)>
+          .collection__list__introduction.introduction-left
+            %p.marker-line <チーム開発（アジャイル開発) スクラムマスターを経験>
+            %p フリーマーケットアプリ
             %p アクセス認証 ID: okada  Pass: tech73b
-            %p <開発言語> 
+            %p.marker-line <開発言語> 
             %p Haml・SCSS・Ruby・Ruby on Rails・JavaScript・jQuery・GitHub・AWS・S3
-
-            %p#js-show 概要を見る
-          .collection__list__show
-            %p <開発担当箇所>
-            %p フロントエンド サーバーサイド
-            %p ・データベース設計
-            %p ・ユーザーマイページ
-            %p ・トップページのカテゴリーhover表示
-            %p ・商品一覧、カテゴリーピックアップ一覧表示
-            %p ・商品写真の複数投稿、編集、削除機能
-            %p ・商品購入機能
+            %p.marker-line <内容>
+            %p ユーザーが商品を出品・編集・購入・コメントができる、多機能なアプリケーションです。
+            #js-left.collection__list__introduction--right 概要を見る ← click
+            .collection__list__introduction--hide
+              %p.marker-line <開発担当箇所>
+              %p フロントエンド サーバーサイド
+              %p ・データベース設計
+              %p ・ユーザーマイページ
+              %p ・トップページのカテゴリーhover表示
+              %p ・商品一覧、カテゴリーピックアップ一覧表示
+              %p ・商品写真の複数投稿、編集、削除機能
+              %p ・商品購入機能
 
         %li.collection__list--item
-          %a{href: "http://3.114.198.104/", rel: "noopener noreferrer", target: "_blank"}
+          .collection__list__introduction.introduction-right
+            %p.marker-line <個人開発>
+            %p カレンダー共有アプリ(メッセージ機能あり)
+            %p.marker-line <開発言語>
+            %p Haml・SCSS・Ruby・Ruby on Rails・JavaScript・jQuery・GitHub・AWS・S3
+            %p.marker-line <内容>
+            %p 大切な人、仕事仲間で予定の共有ができるアプリケーションです。
+            %p 予定ごとにメッセージ機能をあわせ持ち、コミュニケーションツールとしても使用できます。
+            #js-right.collection__list__introduction--right 概要を見る ← click
+            .collection__list__introduction--hided
+              %p.marker-line <企画背景>
+              %p 前職において、業務の中での予定共有や案件に紐づくメール検索に時間を費やすとの声が多くあったことから、グループでのカレンダーを用いた予定共有やその予定ごとにチャット機能を持たせることで、どのイベントや案件での内容かを明確化させるアプリになります。個人のマイページを持たせることで、アプリに登録しているユーザーへの友達申請や承認、友達になれば、グループカレンダーに参加ができるような仕組みにすることで、家族や友人においても大切な予定を共有できるのではないかという思いで作成しました。
+
+              %p.marker-line <テストアカウント>
+              %p name : テストID
+              %p email：test@gmail.com
+              %p password：test10
+              %p.marker-line Github： https://github.com/shota12085/task_calendar
+          %a.collection__list--right{href: "http://3.114.198.104/", rel: "noopener noreferrer", target: "_blank"}
             .collection__list__image--app2
             .collection__list__title 
               Task Calendar
-          .collection__list__introduction
-            %p <個人開発>
-            %p カレンダー共有アプリ(イベントごとにメッセージ機能あり)
-            %p <開発言語>
-            %p Haml・SCSS・Ruby・Ruby on Rails・JavaScript・jQuery・GitHub・AWS・S3
-
-            %p#js-show 概要を見る
-          .collection__list__show
-            %p <内容>
-            %p 家族、仕事仲間、友人で予定の共有ができ、それぞれの予定ごとにチャット機能を持った複合的機能をもつアプリケーションです。
-            %p <企画背景>
-            %p 前職において、業務の中での予定共有や案件に紐づくメール検索に時間を費やすとの声が多くあったことから、グループでのカレンダーを用いた予定共有やその予定ごとにチャット機能を持たせることで、どのイベントや案件での内容かを明確化させるアプリになります。個人のマイページを持たせることで、アプリに登録しているユーザーへの友達申請や承認、友達になれば、グループカレンダーに参加ができるような仕組みにすることで、家族や友人においても大切な予定を共有できるのではないかという思いで作成しました。
-
-            %p <テストアカウント>
-            %p name : テストID
-            %p email：test@gmail.com
-            %p password：test10
-            %p Github： https://github.com/shota12085/task_calendar
     .scroll
-      %a{href: "#tertiary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
-      %a{href: "#contact"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image"
+      %a{href: "#tertiary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image--left"
+      %a{href: "#contact"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image--right"
 %contact
   .contact#contact
     %h2.contact-content contact
-    .contact-link
-      %a{href: "https://twitter.com/Ti1NEKP43Ai66Cp", rel: "noopener noreferrer", target: "_blank"}
-        .contact-image
-      
-      
     .form
       .form__label
         %label name
@@ -129,12 +222,12 @@
       .form__label
         %label text
       .form__text
-        %textarea{class: "form__input--height", type: "text",maxlength: 800,placeholder: "件名を入力してください"}
+        %textarea{class: "form__input--height", type: "text",maxlength: 800,placeholder: "本文を入力してください"}
       .form__submit
         %input{class: "form__submit--size", type: "submit", value: "送信"}
     .scroll
-      %a.scroll-image{href: "#wrapper"} TOP
-      %a{href: "#quaternary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image"
+      %a.scroll-image--bottom{href: "#wrapper"} TOP
+      %a{href: "#quaternary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image--left"
 
     
 

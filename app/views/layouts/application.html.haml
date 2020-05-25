@@ -1,14 +1,15 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+
     %title MyPortfolio
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application',media: 'all', 'data-turbolinks-track': 'reload'
-    -# %link{:href => "animate.css", :rel => "stylesheet"}
-    -# %script{:src => "jquery.lettering.js"}
+    %link{href: "https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css", rel: "stylesheet"}
 
   %body
     = yield

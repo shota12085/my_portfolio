@@ -29,47 +29,22 @@ window.onload = function(){
   })
 }
 
-
-
-$(function(){
-  $('a[href^="#"]').click(function() {
-    const speed = 500;
-    let href = $(this).attr("href");
-    let target = $(href == "#" || href == "" ? 'html' : href);
-    let position = target.offset().top;
-    $('body,html').animate({
-      scrollTop: position
-    }, speed, 'swing');
-    return false;
-  });
-
-  $('#secondary').mouseover(function(){
-    $('.about__image').addClass('showUp');
-    $('.about__introduction').addClass('showIn');
-  })
-  $('#secondary').mouseout(function(){
-    $('.about__image').removeClass('showUp');
-    $('.about__introduction').removeClass('showIn');
-  })
-
-  
-})
 $(function () {
-  $('.test').textillate({
+  $('.concept-main').textillate({
     selector: '.texts',	// 要素を指定
     loop: false,	// ループ繰り返し
-    minDisplayTime: 3000,	// アニメーションの間隔時間
+    minDisplayTime: 2000,	// アニメーションの間隔時間
     initialDelay: 100,	// アニメーション開始までの遅延時間
     autoStart: true,	// アニメーションの自動スタート
     inEffects: [],	// エフェクト開始時のアニメーション設定
     outEffects: [ 'hinge' ],	// エフェクト終了時のアニメーション設定
   
     in: {
-      effect: 'fadeInLeftBig',	// エフェクトの指定
+      effect: 'fadeInDownBig',	// エフェクトの指定
       delayScale: 1.5,	// 遅延時間の指数
-      delay: 100,	// 文字ごとの遅延時間
+      delay: 200,	// 文字ごとの遅延時間
       sync: false,	// アニメーションをすべての文字に同時に適用
-      shuffle: false, // 文字のランダム表示
+      shuffle: true, // 文字のランダム表示
       reverse: false,	// エフェクトを逆に再生（「sync:true」のときは不可）
       callback: function () {}	// コールバック関数
     },
@@ -87,4 +62,71 @@ $(function () {
     type: 'char'
   });
 })
+// $(function(){
+//   $('body').on('mouseover',function(){
+//     $(".concept-message").fadeIn(3000);
+//   })
+// })
+$(document).ready(function(){
+  $(".concept-message").fadeIn(5000);
+})
 
+
+
+$(function(){
+  $('a[href^="#"]').click(function() {
+    const speed = 500;
+    let href = $(this).attr("href");
+    let target = $(href == "#" || href == "" ? 'html' : href);
+    let position = target.offset().top;
+    $('body,html').animate({
+      scrollTop: position
+    }, speed, 'swing');
+    return false;
+  });
+
+  $('#secondary').mouseover(function(){
+    $('.about__image').addClass('showUp');
+    $('.about__contact').addClass('showLast');
+  })
+  $('#secondary').mouseout(function(){
+    $('.about__image').removeClass('showUp');
+    $('.about__contact').removeClass('showLast');
+  })
+  
+  $('#tertiary').mouseover(function(){
+    $('.list-right').addClass('showRight');
+    $('.list-left').addClass('showLeft');
+  })
+  $('#secondary').mouseover(function(){
+    $('.list-right').removeClass('showRight');
+    $('.list-left').removeClass('showLeft');
+  })
+  $('#quaternary').mouseover(function(){
+    $('.list-right').removeClass('showRight');
+    $('.list-left').removeClass('showLeft');
+  })
+
+  $('#quaternary').mouseover(function(){
+    $('.collection__list--right').addClass('right_Cross');
+    $('.collection__list--left').addClass('left_Cross');
+    $('.introduction-left').addClass('rightup_Cross');
+    $('.introduction-right').addClass('leftdown_Cross');
+  })
+  // $('#tertiary').mouseover(function(){
+  //   $('.collection__list--right').removeClass('right_Cross');
+  //   $('.collection__list--left').removeClass('left_Cross');
+  // })
+  // $('#contact').mouseover(function(){
+  //   $('.collection__list--right').removeClass('right_Cross');
+  //   $('.collection__list--left').removeClass('left_Cross');
+  // })
+  
+
+  $('#js-left').on('click',function(){
+    $('.collection__list__introduction--hide').slideToggle(400);
+  })
+  $('#js-right').on('click',function(){
+    $('.collection__list__introduction--hided').slideToggle(400);
+  })
+})
