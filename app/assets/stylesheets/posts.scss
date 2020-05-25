@@ -164,6 +164,7 @@ body{
       .about-js{
         width: 35%;
         margin-right: 100px;
+        @include background_size();
       }
       .about__introduction{
         width: 65%;
@@ -180,7 +181,7 @@ body{
       }
       &__image{
         width: 100%;
-        height: 400px;
+        height: 70%;
         box-shadow: 5px 5px 5px gray;
         opacity: 0;
         transition: .7s;
