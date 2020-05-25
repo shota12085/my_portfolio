@@ -1,0 +1,65 @@
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  } 
+  to {
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  } 
+  to {
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLcross {
+  from {
+    opacity: 0;
+    transform: translate(500px,300px);
+  } 
+  to {
+    opacity: 0.9;
+    transform: translate(0,0);
+  }
+}
+@keyframes slideInRcross {
+  from {
+    opacity: 0;
+    transform: translate(-500px,-300px);
+  } 
+  to {
+    opacity: 0.9;
+    transform: translate(0,0);
+  }
+}
+@keyframes slideInRUcross {
+  from {
+    opacity: 0;
+    transform: translate(-500px,300px);
+  } 
+  to {
+    opacity: 0.9;
+    transform: translate(0,0);
+  }
+}
+@keyframes slideInLDcross {
+  from {
+    opacity: 0;
+    transform: translate(500px,-300px);
+  } 
+  to {
+    opacity: 0.9;
+    transform: translate(0,0);
+  }
+}
+
+@keyframes key1{
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
+}

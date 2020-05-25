@@ -1,0 +1,54 @@
+@mixin PC{
+  @media screen and (max-width: 1024px) { @content; }
+}
+@mixin tab{
+  @media screen and (min-width: 896px) { @content; }
+}
+@mixin phone{
+  @media screen and (min-width: 480px) { @content; }
+}
+
+
+@mixin image_icon($width,$height,$top,$right){
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 5px 5px gray;
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: 0.5s;
+  top: $top;
+  right: $right;
+}
+
+@mixin nav($color){
+  position: absolute;
+  top : 70px;
+  left: 20px;
+  font-size: 36px;
+  color: $color;
+}
+
+@mixin animation($name,$time,$opacity){
+  animation-name: $name;
+  animation-duration: $time;
+  animation-timing-function: ease-out;
+  opacity: $opacity;
+}
+
+@mixin background_size(){
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin marker($top,$font){
+  display: inline-block;
+  background: linear-gradient(transparent 60%, #66ccff 60%);
+  padding-right: 9px;
+  margin: $top 0;
+  font-size: $font;
+  font-weight: bold;
+  border-radius: 10px;
+}
