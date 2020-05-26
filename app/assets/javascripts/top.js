@@ -129,4 +129,7 @@ $(function(){
   $('#js-right').on('click',function(){
     $('.collection__list__introduction--hided').slideToggle(400);
   })
+  $('#js-right--phone').on('click',function(){
+    $('.collection__list__introduction--hided').slideToggle(400);
+  })
 })

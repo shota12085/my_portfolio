@@ -178,7 +178,7 @@
               %p ・商品購入機能
 
         %li.collection__list--item
-          .collection__list__introduction.introduction-right
+          .collection__list__introduction.introduction-right.introduction-right--phone
             %p.marker-line <個人開発>
             %p カレンダー共有アプリ(メッセージ機能あり)
             %p.marker-line <開発言語>
@@ -200,6 +200,24 @@
             .collection__list__image--app2
             .collection__list__title 
               Task Calendar
+          .collection__list__introduction.introduction-right.introduction-right--display
+            %p.marker-line <個人開発>
+            %p カレンダー共有アプリ(メッセージ機能あり)
+            %p.marker-line <開発言語>
+            %p Haml・SCSS・Ruby・Ruby on Rails・JavaScript・jQuery・GitHub・AWS・S3
+            %p.marker-line <内容>
+            %p 大切な人、仕事仲間で予定の共有ができるアプリケーションです。
+            %p 予定ごとにメッセージ機能をあわせ持ち、コミュニケーションツールとしても使用できます。
+            #js-right--phone.collection__list__introduction--right 概要を見る ← click
+            .collection__list__introduction--hided
+              %p.marker-line <企画背景>
+              %p 前職において、業務の中での予定共有や案件に紐づくメール検索に時間を費やすとの声が多くあったことから、グループでのカレンダーを用いた予定共有やその予定ごとにチャット機能を持たせることで、どのイベントや案件での内容かを明確化させるアプリになります。個人のマイページを持たせることで、アプリに登録しているユーザーへの友達申請や承認、友達になれば、グループカレンダーに参加ができるような仕組みにすることで、家族や友人においても大切な予定を共有できるのではないかという思いで作成しました。
+
+              %p.marker-line <テストアカウント>
+              %p name : テストID
+              %p email：test@gmail.com
+              %p password：test10
+              %p.marker-line Github： https://github.com/shota12085/task_calendar
     .scroll
       %a{href: "#tertiary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image--left"
       %a{href: "#contact"}= image_tag "sozai_cman_jp_20200522143923.png",class: "scroll-image--right"

@@ -17,11 +17,20 @@ body{
       @include PC{
         @include image_icon(200px,200px,12%,10%);
       }
+      @include phone{
+        @include image_icon(100px,100px,35%,5%);
+        box-shadow: 2px 2px 2px gray;
+      }
       &:hover{
         transform: scale(1.1, 1.1);
       }
       .top-nav{
         @include nav(#404040);
+        @include phone{
+          top: 40%;
+          left: 10%;
+          font-size: 20px;
+        }
       }
     }
     .second-image{
@@ -34,11 +43,20 @@ body{
       @include PC{
         @include image_icon(200px,200px,42%,5%);
       }
+      @include phone{
+        @include image_icon(100px,100px,50%,15%);
+        box-shadow: 2px 2px 2px gray;
+      }
       &:hover{
         transform: scale(1.1, 1.1);
       }
       .second-nav{
         @include nav(#ddd);
+        @include phone{
+          top: 40%;
+          left: 10%;
+          font-size: 20px;
+        }
       }
     }
     .third-image{
@@ -51,11 +69,20 @@ body{
       @include PC{
         @include image_icon(200px,200px,72%,10%);
       }
+      @include phone{
+        @include image_icon(100px,100px,65%,25%);
+        box-shadow: 2px 2px 2px gray;
+      }
       &:hover{
         transform: scale(1.1, 1.1);
       }
       .third-nav{
         @include nav(#404040);
+        @include phone{
+          top: 40%;
+          left: 10%;
+          font-size: 20px;
+        }
       }
     }
     .concept{
@@ -73,6 +100,11 @@ body{
       }
       @include PC{
         font-size: 3rem;
+      }
+      @include phone{
+        top: 15%;
+        left: 10%;
+        font-size: 2rem;        
       }
     }
     .concept-message{
@@ -103,6 +135,12 @@ body{
         top: 50%;
         left: 39%;
         font-size: 1.5rem;
+      }
+      @include phone{
+        padding: 10px;
+        top: 45%;
+        left: 35%;
+        font-size: 0.8rem;
       }
     }
     .header{
@@ -137,11 +175,19 @@ body{
           @include tab{
             color: #404040;
             font-size: 24px;
+          }
+          @include phone{
+            color: #404040;
+            font-size: 18px;
+            padding: 5px;
           }         
         }
         li{
           padding: 10px 20px;
           cursor: pointer;
+          @include phone{
+            padding: 10px;
+          }         
         }
         .header-list{
           color: #ddd;
@@ -152,6 +198,10 @@ body{
           @include PC{
             color: #404040;
           }
+          @include phone{
+            color: #404040;
+            font-size: 18px;
+          }     
         }
       }
     }
@@ -198,6 +248,10 @@ body{
       @include tab{
         display: block;
       }
+      @include phone{
+        width: 100%;
+        padding: 5px 10px;
+      }
       .about-js{
         width: 40%;
         @include tab{
@@ -212,6 +266,10 @@ body{
         box-shadow: 1px 2px 2px 3px gray;
         @include tab{
           width: 90%;
+          margin: 0 auto;
+        }
+        @include phone{
+          width: 100%;
           margin: 0 auto;
         }
         p{
@@ -355,6 +413,10 @@ body{
         @include PC{
           margin: 0 40px;
         }
+        @include phone{
+          display: block;
+          margin: 0 10px;
+        }
         // @include tab{
         //   opacity: 1;
         // }
@@ -371,6 +433,10 @@ body{
         @include tab{
           padding: 20px 5px 5px;
         }
+        @include phone{
+          display: block;
+          width: 100%;
+        }     
         i{
           font-size: 30px;
           margin-right: 10px;
@@ -412,6 +478,9 @@ body{
         &--item{
           display: flex;
           padding: 20px;
+          @include phone{
+            display: block;
+          }     
         }
         &--left{
           opacity: 0;
@@ -482,6 +551,19 @@ body{
           padding: 10px 5px;
           font-size: 20px;
         }
+        .introduction-right--display{
+          display: none;
+          @include phone{
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+          }
+        }
+        .introduction-right--phone{
+          @include phone{
+            display: none;
+          }
+        }
         .introduction-left,.introduction-right{
           opacity: 0;
           @include PC{
@@ -500,6 +582,9 @@ body{
           box-shadow: 3px 3px 4px 4px gray;
           padding: 10px;
           border-radius: 5px;
+          @include phone{
+            width: 100%;
+          }
           &--right{
             text-align: center;
             cursor: pointer;
@@ -524,29 +609,46 @@ body{
         margin: 0 auto;
         padding: 15px 5px;
         font-size: 18px;
+        @include phone{
+          width: 300px;
+        }
       }
       &__input{
         width: 450px;
         height: 50px;
         padding: 10px;
         border: none;
+        @include phone{
+          width: 300px;
+          font-size: 14px;
+        }
       }
       &__input--height{
         width: 450px;
         height: 150px;
         padding: 10px;
         border: none;
+        @include phone{
+          width: 300px;
+          font-size: 14px;
+        }
       }
       &__submit{
         width: 450px;
         margin: 0 auto;
         padding: 15px 15px 10px;
         text-align: right;
+        @include phone{
+          width: 300px;
+        }
         &--size{
           height: 50px;
           width: 30%;
           border: none;
           cursor: pointer;
+          @include phone{
+            height: 40px;;
+          }
         }
       }
     }
