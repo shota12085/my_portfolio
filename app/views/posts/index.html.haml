@@ -226,24 +226,25 @@
   .contact#contact
     %h2.contact-content contact
     .form
+    = form_with url: create_path, local: true do |f|
       .form__label
         %label name
       .form__name
-        %input{class: "form__input", type: "string",maxlength: 20,placeholder: "名前を入力してください"}
+        = f.text_field :name, class: "form__input", maxlength: 20, placeholder: "名前を入力してください"
       .form__label
         %label email
       .form__email
-        %input{class: "form__input", type: "email",maxlength: 50,placeholder: "メールアドレスを入力してください"}
+        = f.text_field :email, class: "form__input", maxlength: 50, placeholder: "メールアドレスを入力してください"
       .form__label
         %label subject
       .form__subject
-        %input{class: "form__input", type: "text",maxlength: 50,placeholder: "件名を入力してください"}
+        = f.text_field :subject, class: "form__input", maxlength: 50, placeholder: "件名を入力してください"
       .form__label
         %label text
       .form__text
-        %textarea{class: "form__input--height", type: "text",maxlength: 800,placeholder: "本文を入力してください"}
+        = f.text_area :message, class: "form__input--height", maxlength: 800, placeholder: "本文を入力してください"
       .form__submit
-        %input{class: "form__submit--size", type: "submit", value: "送信"}
+        = f.submit "送信", class: "form__submit--size"
     %a.scroll-image--bottom{href: "#wrapper"} TOP
     .scroll
       %a{href: "#quaternary"}= image_tag "sozai_cman_jp_20200522154056.png",class: "scroll-image--left"
