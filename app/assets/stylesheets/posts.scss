@@ -538,8 +538,10 @@ body{
         &--item{
           display: flex;
           padding: 20px;
+          border-bottom: 3px solid #ccc;
           @include lphone{
             display: block;
+            border-bottom: none;
           }     
         }
         &--left{
