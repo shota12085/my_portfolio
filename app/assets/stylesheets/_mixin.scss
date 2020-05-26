@@ -1,6 +1,7 @@
 $pro: 1366px;
 $PC: 1024px;
 $tab: 896px;
+$lphone: 823px;
 $phone: 480px;
 $small: 350px;
 @mixin pro{
@@ -11,6 +12,9 @@ $small: 350px;
 }
 @mixin tab{
   @media screen and (max-width: $tab) { @content; }
+}
+@mixin lphone{
+  @media screen and (max-width: $lphone) { @content; }
 }
 @mixin phone{
   @media screen and (max-width: $phone) { @content; }
