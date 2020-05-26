@@ -1,5 +1,7 @@
 %main
   .wrapper#wrapper
+    - flash.each do |key, value|
+      = content_tag :div, value, class: key
     .header
       .header-left
       .header-right
