@@ -231,13 +231,18 @@ body{
           @include phone{
             padding: 10px;
           }         
+          @include PC{
+            font-size: 30px;
+          }
+          @include tab{
+            font-size: 24px;
+          }
+          @include phone{
+            font-size: 18px;
+          }       
         }
         .header-list{
           color: #ddd;
-          @include pro{
-            color: #404040;
-            font-size: 30px;
-          }
           @include PC{
             color: #404040;
           }
