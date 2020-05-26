@@ -335,6 +335,13 @@ body{
           @include marker(3px,18px);
         }
       }
+      &__name{
+        width: 430px;
+        padding: 10px 20px 0;
+        font-size: 30px;
+        text-align: center;
+        opacity: 0;
+      }
       &__image{
         width: 430px;
         height: 450px;
@@ -357,6 +364,9 @@ body{
         }
       }
       &__image.showUp{
+        opacity: 1;
+      }
+      &__name.showUp{
         opacity: 1;
       }
       &__contact{

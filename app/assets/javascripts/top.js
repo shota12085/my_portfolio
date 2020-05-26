@@ -87,10 +87,12 @@ $(function(){
 
   $('#secondary').mouseover(function(){
     $('.about__image').addClass('showUp');
+    $('.about__name').addClass('showUp');
     $('.about__contact').addClass('showLast');
   })
   $('#secondary').mouseout(function(){
     $('.about__image').removeClass('showUp');
+    $('.about__name').removeClass('showUp');
     $('.about__contact').removeClass('showLast');
   })
   
