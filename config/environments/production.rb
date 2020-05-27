@@ -64,9 +64,8 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "my_portfolio_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
-  # config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.logger = Logger.new('log/production_mail.log', 'weekly')
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: 'shota12085.herokuapp.com',protocol: 'https' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
