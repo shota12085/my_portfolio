@@ -74,8 +74,9 @@ Rails.application.configure do
     port:                  587,
     domain:               'smpt.gmail.com',
     user_name:             ENV['EMAIL'],
+    password:              ENV['PASS'],
     password:              ENV['SECRET_PASS'],
-    authentication:       'login',
+    authentication:       'plain',
     enable_starttls_auto:  true
   }
 
